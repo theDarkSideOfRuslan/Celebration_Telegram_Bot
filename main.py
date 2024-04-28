@@ -8,15 +8,14 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG
 )
 logger = logging.getLogger(__name__)
-reply_keyboard = [['/address', '/phone'],
-                  ['/site', '/work_time']]
-markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
+day_select_keyboard = [['День\nРождения', 'Новый\nГод'], ['23 Февраля', '8 марта'], ['1 Мая', 'День\nПобеды']]
+day_select_markup = ReplyKeyboardMarkup(day_select_keyboard, one_time_keyboard=True)
 
 
 async def start(update, context):
     await update.message.reply_text(
-        "Я бот-справочник. Какая информация вам нужна?",
-        reply_markup=markup
+        "Доброго времени суток! \n\nЯ создам открытку: выберите праздник",
+        reply_markup=day_select_markup
     )
 
 
@@ -25,23 +24,11 @@ async def help(update, context):
         "Я бот справочник.")
 
 
-async def address(update, context):
+async def answer(update, context):
+    # update.message.text
     await update.message.reply_text(
-        "Адрес: г. Москва, ул. Льва Толстого, 16")
-
-
-async def phone(update, context):
-    await update.message.reply_text("Телефон: +7(495)776-3030")
-
-
-async def site(update, context):
-    await update.message.reply_text(
-        "Сайт: http://www.yandex.ru/company")
-
-
-async def work_time(update, context):
-    await update.message.reply_text(
-        "Время работы: круглосуточно.")
+        "Я бот справочник."
+    )
 
 
 async def close_keyboard(update, context):
@@ -54,10 +41,6 @@ async def close_keyboard(update, context):
 def main():
     application = Application.builder().token('7022244531:AAFrriCDnwrrQFPNsmzhEPYbKWP0gIqebgc').build()
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("address", address))
-    application.add_handler(CommandHandler("phone", phone))
-    application.add_handler(CommandHandler("site", site))
-    application.add_handler(CommandHandler("work_time", work_time))
     application.add_handler(CommandHandler("help", help))
     application.add_handler(CommandHandler("close", close_keyboard))
     application.run_polling()
