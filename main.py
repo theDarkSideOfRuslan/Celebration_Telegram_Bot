@@ -9,6 +9,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 day_select_keyboard = [['День\nРождения', 'Новый\nГод'], ['23 Февраля', '8 марта'], ['1 Мая', 'День\nПобеды']]
+all_days = [j for i in day_select_keyboard for j in i]
+print(all_days)
 day_select_markup = ReplyKeyboardMarkup(day_select_keyboard, one_time_keyboard=True)
 
 
@@ -21,7 +23,7 @@ async def start(update, context):
 
 async def help(update, context):
     await update.message.reply_text(
-        "Я бот справочник.")
+        "Введите /start, чтобы начать создавать открытку")
 
 
 async def answer(update, context):
@@ -43,6 +45,8 @@ def main():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help))
     application.add_handler(CommandHandler("close", close_keyboard))
+    text_handler = MessageHandler(filters.TEXT & ~filters.COMMAND, answer)
+    application.add_handler(text_handler)
     application.run_polling()
 
 
