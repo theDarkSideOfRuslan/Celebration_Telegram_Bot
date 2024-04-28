@@ -1,7 +1,8 @@
 import logging
 from telegram.ext import Application, MessageHandler, filters
 from telegram.ext import CommandHandler, ConversationHandler
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram import ReplyKeyboardMarkup
+import photo_generator
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
@@ -49,6 +50,7 @@ async def to_select(update, context):
 
 async def photo_generate(update, context):
     context.user_data['to'] = update.message.text
+    photo_generator.new_year(context.user_data['by'], context.user_data['to'])
     await update.message.reply_text(
         f"Делаем открытку на праздник {context.user_data['day']} от: {context.user_data['by']} кому: {context.user_data['to']}"
     )
@@ -82,8 +84,6 @@ def main():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help))
     application.run_polling()
-    #s
-
 
 if __name__ == '__main__':
     main()
