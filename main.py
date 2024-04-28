@@ -82,6 +82,7 @@ def main():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help))
     application.run_polling()
+    #s
 
 
 if __name__ == '__main__':
