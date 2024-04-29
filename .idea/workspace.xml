@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="start, help">
+    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="IDK Its 5Am Im gonna sleep prolly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="bot_basics" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -21,6 +25,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "theDarkSideOfRuslan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/theDarkSideOfRuslan/Celebration_Telegram_Bot",
+    "accountId": "1a41579c-44fb-4881-a647-2fc52c87231b"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -34,7 +50,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bot__basics&quot;
+    &quot;git-widget-placeholder&quot;: &quot;photo__generating&quot;
   }
 }</component>
   <component name="RunManager">
@@ -93,7 +109,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714315800965</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="info collecting3">
+      <option name="closed" value="true" />
+      <created>1714335059364</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714335059364</updated>
+    </task>
+    <task id="LOCAL-00004" summary="IDK Its 5Am Im gonna sleep prolly">
+      <option name="closed" value="true" />
+      <created>1714341426008</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714341426008</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,7 +133,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="photo_generating" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -110,6 +154,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first_commit" />
     <MESSAGE value="start, help" />
-    <option name="LAST_COMMIT_MESSAGE" value="start, help" />
+    <MESSAGE value="info collecting3" />
+    <MESSAGE value="IDK Its 5Am Im gonna sleep prolly" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDK Its 5Am Im gonna sleep prolly" />
   </component>
 </project>

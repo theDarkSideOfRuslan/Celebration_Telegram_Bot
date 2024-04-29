@@ -50,10 +50,13 @@ async def to_select(update, context):
 
 async def photo_generate(update, context):
     context.user_data['to'] = update.message.text
-    photo_generator.new_year(context.user_data['by'], context.user_data['to'])
+    #Тут все картинки как python объекты, в 'data/NewYear' сохраняются открытки
+    photos = photo_generator.new_year(context.user_data['by'], context.user_data['to'])
     await update.message.reply_text(
+        open('data/NewYear/NewYear33.jpg'),
         f"Делаем открытку на праздник {context.user_data['day']} от: {context.user_data['by']} кому: {context.user_data['to']}"
     )
+    context.user_data.clear()
     return ConversationHandler.END
 
 
