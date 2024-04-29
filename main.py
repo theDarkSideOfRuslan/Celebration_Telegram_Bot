@@ -1,7 +1,7 @@
 import logging
-from telegram.ext import Application, MessageHandler, filters
-from telegram.ext import CommandHandler, ConversationHandler
-from telegram import ReplyKeyboardMarkup
+from telegram.ext import Application, MessageHandler, filters, \
+    CommandHandler, ConversationHandler
+from telegram import ReplyKeyboardMarkup, Update, InputMediaPhoto
 import photo_generator
 
 
@@ -16,7 +16,7 @@ continue_keyboard = [['Продолжить']]
 continue_markup = ReplyKeyboardMarkup(continue_keyboard, one_time_keyboard=True)
 
 
-async def start(update, context):
+async def start(update: Update, context):
     await update.message.reply_text(
         "Доброго времени суток, я создам открытку!\nНажмите продолжить",
         reply_markup=continue_markup
@@ -50,13 +50,35 @@ async def to_select(update, context):
 
 async def photo_generate(update, context):
     context.user_data['to'] = update.message.text
-    #Тут все картинки как python объекты, в 'data/NewYear' сохраняются открытки
-    photos = photo_generator.new_year(context.user_data['by'], context.user_data['to'])
-    await update.message.reply_text(
-        open('data/NewYear/NewYear33.jpg'),
-        f"Делаем открытку на праздник {context.user_data['day']} от: {context.user_data['by']} кому: {context.user_data['to']}"
-    )
+    day, by, to = context.user_data['day'], context.user_data['by'], context.user_data['to']
     context.user_data.clear()
+    if day not in all_days:
+        await update.message.reply_text(
+            f"Такого праздника нет, давай заново :) /start"
+        )
+        return
+
+    await update.message.reply_text(
+        f"Делаем открытку на праздник {day} от: {by} кому: {to}"
+    )
+    if day == 'Новый Год':
+        photo_generator.new_year(by, to)
+        await update.message.reply_media_group(
+            [InputMediaPhoto(open('data/NewYear/NewYear11.jpg', 'rb')),
+             InputMediaPhoto(open('data/NewYear/NewYear33.jpg', 'rb')),
+             InputMediaPhoto(open('data/NewYear/NewYear44.jpg', 'rb')),
+             InputMediaPhoto(open('data/NewYear/NewYear55.jpg', 'rb'))
+             ]
+        )
+    if day == 'День Рождения':
+        photo_generator.new_year(by, to)
+        await update.message.reply_media_group(
+            [InputMediaPhoto(open('data/NewYear/NewYear11.jpg', 'rb')),
+             InputMediaPhoto(open('data/NewYear/NewYear33.jpg', 'rb')),
+             InputMediaPhoto(open('data/NewYear/NewYear44.jpg', 'rb')),
+             InputMediaPhoto(open('data/NewYear/NewYear55.jpg', 'rb'))
+             ]
+        )
     return ConversationHandler.END
 
 

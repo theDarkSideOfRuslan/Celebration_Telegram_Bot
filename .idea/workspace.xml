@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="IDK Its 5Am Im gonna sleep prolly">
+    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="For Prizz">
+      <change afterPath="$PROJECT_DIR$/data/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NewYear/NewYear55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/fonts/Antarctic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/fonts/TransformaMix_Trial-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/fonts/TransformaScript_Trial-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/photo_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo_generator.py" afterDir="false" />
@@ -125,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714341426008</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="For Prizz">
+      <option name="closed" value="true" />
+      <created>1714362877228</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714362877228</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +176,7 @@
     <MESSAGE value="start, help" />
     <MESSAGE value="info collecting3" />
     <MESSAGE value="IDK Its 5Am Im gonna sleep prolly" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDK Its 5Am Im gonna sleep prolly" />
+    <MESSAGE value="For Prizz" />
+    <option name="LAST_COMMIT_MESSAGE" value="For Prizz" />
   </component>
 </project>
