@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 day_select_keyboard = [['День\nРождения', 'Новый\nГод'], ['23 Февраля', '8 марта'], ['1 Мая', 'День\nПобеды']]
-all_days = [j for i in day_select_keyboard for j in i]
+all_days = list(map(lambda x: x.replace('\n', ' '), [j for i in day_select_keyboard for j in i]))
 print(all_days)
 day_select_markup = ReplyKeyboardMarkup(day_select_keyboard, one_time_keyboard=True)
 continue_keyboard = [['Продолжить']]
@@ -71,12 +71,21 @@ async def photo_generate(update, context):
              ]
         )
     if day == 'День Рождения':
-        photo_generator.new_year(by, to)
+        photo_generator.birthday(by, to)
         await update.message.reply_media_group(
-            [InputMediaPhoto(open('data/NewYear/NewYear11.jpg', 'rb')),
-             InputMediaPhoto(open('data/NewYear/NewYear33.jpg', 'rb')),
-             InputMediaPhoto(open('data/NewYear/NewYear44.jpg', 'rb')),
-             InputMediaPhoto(open('data/NewYear/NewYear55.jpg', 'rb'))
+            [InputMediaPhoto(open('data/Birthday/Birthday11.jpg', 'rb')),
+             InputMediaPhoto(open('data/Birthday/Birthday22.jpg', 'rb'))
+             # InputMediaPhoto(open('data/Birthday/Birthday33.jpg', 'rb')),
+             # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
+             ]
+        )
+    if day == '8 марта':
+        photo_generator.march8th(by, to)
+        await update.message.reply_media_group(
+            [InputMediaPhoto(open('data/March8th/March8th11.jpg', 'rb')),
+             InputMediaPhoto(open('data/March8th/March8th22.jpg', 'rb'))
+             # InputMediaPhoto(open('data/Birthday/Birthday33.jpg', 'rb')),
+             # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
              ]
         )
     return ConversationHandler.END
