@@ -56,10 +56,10 @@ async def photo_generate(update, context):
         await update.message.reply_text(
             f"Такого праздника нет, давай заново :) /start"
         )
-        return
+        return ConversationHandler.END
 
     await update.message.reply_text(
-        f"Делаем открытку на праздник {day} от: {by} кому: {to}"
+        f'Делаем открытку для праздника "{day}" от: "{by}" кому: "{to}"'
     )
     if day == 'Новый Год':
         photo_generator.new_year(by, to)
@@ -70,7 +70,7 @@ async def photo_generate(update, context):
              InputMediaPhoto(open('data/NewYear/NewYear55.jpg', 'rb'))
              ]
         )
-    if day == 'День Рождения':
+    elif day == 'День Рождения':
         photo_generator.birthday(by, to)
         await update.message.reply_media_group(
             [InputMediaPhoto(open('data/Birthday/Birthday11.jpg', 'rb')),
@@ -79,7 +79,7 @@ async def photo_generate(update, context):
              # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
              ]
         )
-    if day == '8 марта':
+    elif day == '8 марта':
         photo_generator.march8th(by, to)
         await update.message.reply_media_group(
             [InputMediaPhoto(open('data/March8th/March8th11.jpg', 'rb')),
@@ -88,6 +88,13 @@ async def photo_generate(update, context):
              # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
              ]
         )
+    else:
+        await update.message.reply_text(
+            f"К сожалению, этот праздник еще не готов.. Но Новый Год, День Рождения и 8 марта готовы :) /start"
+        )
+    await update.message.reply_text(
+        f"Вы можете создать еще одну открытку :) /start"
+    )
     return ConversationHandler.END
 
 
