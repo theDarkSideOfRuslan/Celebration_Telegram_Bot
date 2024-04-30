@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="Master 3 days ready">
+    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="Bug fixed">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_0_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_0_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_2_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_2_31__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_3_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_3_05__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_3_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_04_2024_3_08__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Birthday/Birthday11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Birthday/Birthday11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Birthday/Birthday22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Birthday/Birthday22.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/March8th/March8th11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/March8th/March8th11.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/March8th/March8th22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/March8th/March8th22.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear11.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear33.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear44.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear55.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear55.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,8 @@
   &quot;keyToString&quot;: {
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;photo__generating&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/pythonProject&quot;
   }
 }</component>
   <component name="RunManager">
