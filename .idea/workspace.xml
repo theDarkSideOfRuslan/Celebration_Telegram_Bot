@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="new year photo generation">
+    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="Master 3 days ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Birthday/Birthday11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Birthday/Birthday11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Birthday/Birthday22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Birthday/Birthday22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/March8th/March8th11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/March8th/March8th11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/March8th/March8th22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/March8th/March8th22.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear11.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear33.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear44.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear55.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/NewYear/NewYear55.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="d94635b3a7a6769d6cb745ac351effde77e73ff5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,7 +148,31 @@
       <option name="project" value="LOCAL" />
       <updated>1714367819743</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="3 days (grace) generation">
+      <option name="closed" value="true" />
+      <created>1714375996308</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714375996308</updated>
+    </task>
+    <task id="LOCAL-00008" summary="3 days (grace) generation">
+      <option name="closed" value="true" />
+      <created>1714376042881</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714376042881</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Master 3 days ready">
+      <option name="closed" value="true" />
+      <created>1714378871110</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714378871110</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +205,8 @@
     <MESSAGE value="IDK Its 5Am Im gonna sleep prolly" />
     <MESSAGE value="For Prizz" />
     <MESSAGE value="new year photo generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="new year photo generation" />
+    <MESSAGE value="3 days (grace) generation" />
+    <MESSAGE value="Master 3 days ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Master 3 days ready" />
   </component>
 </project>

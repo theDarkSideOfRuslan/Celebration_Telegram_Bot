@@ -17,6 +17,7 @@ continue_markup = ReplyKeyboardMarkup(continue_keyboard, one_time_keyboard=True)
 
 
 async def start(update: Update, context):
+    context.user_data.clear()
     await update.message.reply_text(
         "Доброго времени суток, я создам открытку!\nНажмите продолжить",
         reply_markup=continue_markup
@@ -34,6 +35,16 @@ async def day_select(update, context):
 
 async def by_select(update, context):
     context.user_data['day'] = update.message.text.replace('\n', ' ')
+    if context.user_data['day'] not in all_days:
+        await update.message.reply_text(
+            f"Такого праздника нет, давай заново :) /start"
+        )
+        return ConversationHandler.END
+    if context.user_data['day'] not in ('Новый Год', 'День Рождения', '8 марта'):
+        await update.message.reply_text(
+            f"К сожалению, этот праздник еще не готов.. Но Новый Год, День Рождения и 8 марта готовы :) /start"
+        )
+        return ConversationHandler.END
     await update.message.reply_text(
         f"открытка от:"
     )
@@ -56,6 +67,7 @@ async def photo_generate(update, context):
         await update.message.reply_text(
             f"Такого праздника нет, давай заново :) /start"
         )
+        context.user_data.clear()
         return ConversationHandler.END
 
     await update.message.reply_text(
@@ -88,18 +100,13 @@ async def photo_generate(update, context):
              # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
              ]
         )
-    else:
-        await update.message.reply_text(
-            f"К сожалению, этот праздник еще не готов.. Но Новый Год, День Рождения и 8 марта готовы :) /start"
-        )
-    await update.message.reply_text(
-        f"Вы можете создать еще одну открытку :) /start"
-    )
+    context.user_data.clear()
     return ConversationHandler.END
 
 
 async def stop(update, context):
     await update.message.reply_text("Всего доброго!")
+    context.user_data.clear()
     return ConversationHandler.END
 
 
@@ -109,7 +116,8 @@ async def help(update, context):
 
 
 def main():
-    application = Application.builder().token('7022244531:AAFrriCDnwrrQFPNsmzhEPYbKWP0gIqebgc').build()
+    application = Application.builder().token('7048582906:AAHuQrWm6pAFbOYoxa2zfwSc2XgYO1NTM7w').build()
+
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
         states={
@@ -118,9 +126,8 @@ def main():
             3: [MessageHandler(filters.TEXT & ~filters.COMMAND, to_select)],
             4: [MessageHandler(filters.TEXT & ~filters.COMMAND, photo_generate)]
         },
-        fallbacks=[CommandHandler('stop', stop)]
+        fallbacks=[CommandHandler('stop', stop), CommandHandler("start", start)]
     )
-    application = Application.builder().token('7022244531:AAFrriCDnwrrQFPNsmzhEPYbKWP0gIqebgc').build()
     application.add_handler(conv_handler)
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help))
