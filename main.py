@@ -1,4 +1,5 @@
 import logging
+import os
 from telegram.ext import Application, MessageHandler, filters, \
     CommandHandler, ConversationHandler
 from telegram import ReplyKeyboardMarkup, Update, InputMediaPhoto
@@ -40,9 +41,9 @@ async def by_select(update, context):
             f"Такого праздника нет, давай заново :) /start"
         )
         return ConversationHandler.END
-    if context.user_data['day'] not in ('Новый Год', 'День Рождения', '8 марта'):
+    if context.user_data['day'] not in ('Новый Год', 'День Рождения', '8 марта', '23 Февраля', '1 Мая'):
         await update.message.reply_text(
-            f"К сожалению, этот праздник еще не готов.. Но Новый Год, День Рождения и 8 марта готовы :) /start"
+            f"К сожалению, этот праздник еще не готов.. Но остальные готовы :) /start"
         )
         return ConversationHandler.END
     await update.message.reply_text(
@@ -61,6 +62,7 @@ async def to_select(update, context):
 
 async def photo_generate(update, context):
     context.user_data['to'] = update.message.text
+    id = update.message.chat_id
     day, by, to = context.user_data['day'], context.user_data['by'], context.user_data['to']
     context.user_data.clear()
     if day not in all_days:
@@ -74,32 +76,57 @@ async def photo_generate(update, context):
         f'Делаем открытку для праздника "{day}" от: "{by}" кому: "{to}"'
     )
     if day == 'Новый Год':
-        photo_generator.new_year(by, to)
+        photo_generator.new_year(by, to, id)
+        photos = [InputMediaPhoto(open(f'data/NewYear/NewYear1_{id}.jpg', 'rb')),
+                 InputMediaPhoto(open(f'data/NewYear/NewYear2_{id}.jpg', 'rb')),
+                 InputMediaPhoto(open(f'data/NewYear/NewYear3_{id}.jpg', 'rb')),
+                 InputMediaPhoto(open(f'data/NewYear/NewYear4_{id}.jpg', 'rb'))
+                 ]
         await update.message.reply_media_group(
-            [InputMediaPhoto(open('data/NewYear/NewYear11.jpg', 'rb')),
-             InputMediaPhoto(open('data/NewYear/NewYear33.jpg', 'rb')),
-             InputMediaPhoto(open('data/NewYear/NewYear44.jpg', 'rb')),
-             InputMediaPhoto(open('data/NewYear/NewYear55.jpg', 'rb'))
-             ]
+            photos
         )
+        for i in range(len(photos)):
+            os.remove(f'data/NewYear/NewYear{i + 1}_{id}.jpg')
     elif day == 'День Рождения':
-        photo_generator.birthday(by, to)
+        photo_generator.birthday(by, to, id)
+        photos = [InputMediaPhoto(open(f'data/Birthday/Birthday1_{id}.jpg', 'rb')),
+                  InputMediaPhoto(open(f'data/Birthday/Birthday2_{id}.jpg', 'rb'))
+                  ]
         await update.message.reply_media_group(
-            [InputMediaPhoto(open('data/Birthday/Birthday11.jpg', 'rb')),
-             InputMediaPhoto(open('data/Birthday/Birthday22.jpg', 'rb'))
-             # InputMediaPhoto(open('data/Birthday/Birthday33.jpg', 'rb')),
-             # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
-             ]
+            photos
         )
+        for i in range(len(photos)):
+            os.remove(f'data/Birthday/Birthday{i + 1}_{id}.jpg')
     elif day == '8 марта':
-        photo_generator.march8th(by, to)
+        photo_generator.march8th(by, to, id)
+        photos = [InputMediaPhoto(open(f'data/March8th/March8th1_{id}.jpg', 'rb')),
+                  InputMediaPhoto(open(f'data/March8th/March8th2_{id}.jpg', 'rb'))
+                  ]
         await update.message.reply_media_group(
-            [InputMediaPhoto(open('data/March8th/March8th11.jpg', 'rb')),
-             InputMediaPhoto(open('data/March8th/March8th22.jpg', 'rb'))
-             # InputMediaPhoto(open('data/Birthday/Birthday33.jpg', 'rb')),
-             # InputMediaPhoto(open('data/Birthday/Birthday44.jpg', 'rb'))
-             ]
+            photos
         )
+        for i in range(len(photos)):
+            os.remove(f'data/March8th/March8th{i + 1}_{id}.jpg')
+    elif day == '23 Февраля':
+        photo_generator.February23rd(by, to, id)
+        photos = [InputMediaPhoto(open(f'data/February23rd/February23rd1_{id}.jpg', 'rb')),
+                  InputMediaPhoto(open(f'data/February23rd/February23rd2_{id}.jpg', 'rb'))
+                  ]
+        await update.message.reply_media_group(
+            photos
+        )
+        for i in range(len(photos)):
+            os.remove(f'data/February23rd/February23rd{i + 1}_{id}.jpg')
+    elif day == '1 Мая':
+        photo_generator.May1st(by, to, id)
+        photos = [InputMediaPhoto(open(f'data/May1st/May1st1_{id}.jpg', 'rb')),
+                  InputMediaPhoto(open(f'data/May1st/May1st2_{id}.jpg', 'rb'))
+                  ]
+        await update.message.reply_media_group(
+            photos
+        )
+        for i in range(len(photos)):
+            os.remove(f'data/May1st/May1st{i + 1}_{id}.jpg')
     context.user_data.clear()
     return ConversationHandler.END
 
