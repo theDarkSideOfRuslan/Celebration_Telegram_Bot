@@ -41,11 +41,6 @@ async def by_select(update, context):
             f"Такого праздника нет, давай заново :) /start"
         )
         return ConversationHandler.END
-    if context.user_data['day'] not in ('Новый Год', 'День Рождения', '8 марта', '23 Февраля', '1 Мая'):
-        await update.message.reply_text(
-            f"К сожалению, этот праздник еще не готов.. Но остальные готовы :) /start"
-        )
-        return ConversationHandler.END
     await update.message.reply_text(
         f"открытка от:"
     )
@@ -127,6 +122,17 @@ async def photo_generate(update, context):
         )
         for i in range(len(photos)):
             os.remove(f'data/May1st/May1st{i + 1}_{id}.jpg')
+    elif day == 'День Победы':
+        photo_generator.May9th(by, to, id)
+        photos = [InputMediaPhoto(open(f'data/May9th/May9th1_{id}.jpg', 'rb')),
+                  InputMediaPhoto(open(f'data/May9th/May9th2_{id}.jpg', 'rb')),
+                  InputMediaPhoto(open(f'data/May9th/May9th3_{id}.jpg', 'rb'))
+                  ]
+        await update.message.reply_media_group(
+            photos
+        )
+        for i in range(len(photos)):
+            os.remove(f'data/May9th/May9th{i + 1}_{id}.jpg')
     context.user_data.clear()
     return ConversationHandler.END
 

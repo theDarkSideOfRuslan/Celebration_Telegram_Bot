@@ -97,3 +97,26 @@ def May1st(by, to, id):
     drawer.text((5, 845), f"от: {by}   кому: {to}", font=font, fill='white')
     image2.save(f'data/May1st/May1st2_{id}.jpg')
     image2.close()
+
+
+def May9th(by, to, id):
+    image1 = Image.open("data/May9th/May9th1.jpg")
+    font = ImageFont.truetype("data/fonts/Stengazeta-Regular_5.ttf", 50)
+    drawer = ImageDraw.Draw(image1)
+    drawer.text((5, 930), f"от: {by}\nкому: {to}", font=font, fill='black')
+    image1.save(f'data/May9th/May9th1_{id}.jpg')
+    image1.close()
+
+    image2 = Image.open("data/May9th/May9th2.jpg")
+    font = ImageFont.truetype("data/fonts/Stengazeta-Regular_5.ttf", 60)
+    drawer = ImageDraw.Draw(image2)
+    drawer.text((5, 970), f"от: {by}   кому: {to}", font=font, fill='white')
+    image2.save(f'data/May9th/May9th2_{id}.jpg')
+    image2.close()
+
+    image3 = Image.open("data/May9th/May9th3.jpg")
+    font = ImageFont.truetype("data/fonts/Stengazeta-Regular_5.ttf", 79)
+    drawer = ImageDraw.Draw(image3)
+    drawer.text((20, 1150), f"от: {by}\nкому: {to}", font=font, fill='black')
+    image3.save(f'data/May9th/May9th3_{id}.jpg')
+    image3.close()

@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="+Presentation&#10;+requirements.txt&#10;+description">
+    <list default="true" id="aeb42b60-bbe4-4a3f-b0c7-842131a99cd4" name="Changes" comment="Version 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Birthday/Birthday11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Birthday/Birthday22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/March8th/March8th11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/March8th/March8th22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear44.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NewYear/NewYear55.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_description.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Открытки бесплатно.pptx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714481430179</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Version 1.0">
+      <option name="closed" value="true" />
+      <created>1714631833988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714631833988</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +216,7 @@
     <MESSAGE value="3 days (grace) generation" />
     <MESSAGE value="Master 3 days ready" />
     <MESSAGE value="+Presentation&#10;+requirements.txt&#10;+description" />
-    <option name="LAST_COMMIT_MESSAGE" value="+Presentation&#10;+requirements.txt&#10;+description" />
+    <MESSAGE value="Version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.0" />
   </component>
 </project>
